@@ -30,10 +30,8 @@ class Config:
     PDF_DIR = Path("./Ansys_docs")
     CHROMA_DIR = Path("./chroma_ansys")
     EMBEDDING_MODEL = "intfloat/e5-base-v2"
-    #LLM_MODEL = "llama3.1:8b"
-    LLM_MODEL = "gpt-4o"  # "gpt-3.5-turbo" or "gpt-4o"
-    #LLM_TYPE = "ollama"  # "ollama "or "openai"
-    LLM_TYPE = "openai"
+    LLM_MODEL = "gpt-4o"  # "llama3.1:8b" or "gpt-3.5-turbo" or "gpt-4o"
+    LLM_TYPE = "openai"  # "ollama "or "openai"
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")  # Set your API key as environment variable
     CHUNK_SIZE = 1000
     CHUNK_OVERLAP = 100
@@ -239,3 +237,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
