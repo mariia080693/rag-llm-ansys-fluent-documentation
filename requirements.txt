@@ -1,0 +1,63 @@
+# ANSYS RAG System Requirements
+# Updated: August 2025
+# Compatible with Python 3.11+
+
+# Core RAG and LangChain components
+langchain==0.3.27
+langchain-chroma==0.2.5
+langchain-community==0.3.27
+langchain-core==0.3.74
+langchain-huggingface==0.3.1
+langchain-ollama==0.3.6
+langchain-text-splitters==0.3.9
+
+# LLM APIs
+openai==1.55.3
+ollama==0.5.3
+
+# PDF processing
+docling==2.45.0
+docling-core==2.44.2
+docling-ibm-models==3.9.0
+docling-parse==4.1.0
+
+# Vector database
+chromadb==1.0.20
+
+# Embeddings and ML
+sentence-transformers==5.1.0
+torch==2.8.0
+torchvision==0.23.0
+transformers==4.55.2
+huggingface-hub==0.34.4
+
+# Scientific computing
+numpy==2.2.6
+scipy==1.16.1
+scikit-learn==1.7.1
+pandas==2.3.1
+
+# HTTP and API clients
+requests==2.32.5
+httpx==0.28.1
+
+# Environment management
+python-dotenv==1.1.1
+
+# Utilities
+tqdm==4.67.1
+click==8.2.1
+pydantic==2.11.7
+pydantic-settings==2.10.1
+
+# Image processing (for PDF processing)
+pillow==11.3.0
+opencv-python-headless==4.12.0.88
+
+# Additional dependencies for document processing
+beautifulsoup4==4.13.4
+lxml==5.4.0
+pypdfium2==4.30.0
+python-docx==1.2.0
+python-pptx==1.0.2
+openpyxl==3.1.5
