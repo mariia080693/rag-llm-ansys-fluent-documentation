@@ -21,8 +21,9 @@ docling-core==2.44.2
 docling-ibm-models==3.9.0
 docling-parse==4.1.0
 
-# Vector database
+# Vector database and search
 chromadb==1.0.20
+rank-bm25==0.2.2
 
 # Embeddings and ML
 sentence-transformers==5.1.0
