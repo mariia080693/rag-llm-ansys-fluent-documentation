@@ -144,9 +144,14 @@ class Config:
 
 ## Technical Details
 
-- **Embeddings**: E5-base-v2 model for semantic text representation
-- **Chunking**: 1000 characters with 100 character overlap
+- **Embeddings**: E5-base-v2 model for semantic text representation with asymmetric query/passage prefixes
+- **Chunking**: 600 tokens (≈2400 characters) with 120 token overlap, header-aware splitting (H1-H3)
 - **Vector Store**: ChromaDB with persistent storage
-- **Retrieval**: Top-10 most relevant chunks for context
-- **LLM Integration**: Simplified OpenAI API wrapper with error handling
+- **Hybrid Retrieval**: 
+  - Top 10 chunks from semantic (E5) search
+  - Top 3 chunks from BM25 lexical search
+  - Combined without duplicates (semantic prioritized)
+- **LLM Integration**: OpenAI GPT-4o (temperature=0.1, max_tokens=1000) with strict grounding prompt
+- **PDF Processing**: Docling for PDF→Markdown conversion with table recognition
+
 
